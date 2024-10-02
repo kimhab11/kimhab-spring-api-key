@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: kimhab-spring-api-key
+  security:
+    user:
+      name: admin
+      password: ${ADMIN_PASS:securepassword}  # Use a strong password
+  main:
+    allow-bean-definition-overriding: true
+
+server:
+  port: 8080
+
+header:
+  apikey: thisisanexmapleofapikeyheader
+
+
+
