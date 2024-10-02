@@ -29,6 +29,7 @@ public class ApiKeyAuthFilter extends OncePerRequestFilter  {
         request.getHeaderNames().asIterator().forEachRemaining(headerName -> {
             headerInfo.append(headerName).append(": ").append(request.getHeader(headerName)).append("\n");
         });
+        log.info("Header: {}", headerInfo);
 
         if (apiKeyConfig.equals(apiKey)) {
             log.info("API KEY matched");
